@@ -16,8 +16,10 @@ function movie(req, res){
 
             let img = 'https://image.tmdb.org/t/p/w500';
             let movieArray = result.data.results.map(item =>{
-    
-                return new Movies(item.title, img+item.poster_path, item.vote_average);
+            
+                let avatar = item.poster_path?img+item.poster_path:'https://p.kindpng.com/picc/s/78-786678_avatar-hd-png-download.png'
+                
+                return new Movies(item.title, avatar, item.vote_average);
             })
             res.send(movieArray)
             
@@ -32,7 +34,9 @@ function movie(req, res){
     class Movies {
         constructor(title,img,rate){
                 this.title = title;
+
                 this.img = img;
+
                 this.rate = rate;
         }
     }
