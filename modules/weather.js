@@ -8,7 +8,7 @@ function weather(req, res) {
     console.log(q);
     // weather key :21d258f0d3504530a7f35033e1d8e43e   
     // url : https://api.weatherbit.io/v2.0/forecast/daily?city=Amman&key=21d258f0d3504530a7f35033e1d8e43e
-    let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${q}&key=${process.env.WEATHER_KEY}`
+   let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${q}&key=${process.env.WEATHER_KEY}`
 console.log(url);
    
 axios 
