@@ -5,13 +5,13 @@ const cors = require('cors');
 
 const server = express();
 const PORT = process.env.PORT;
-const axios = require('axios');
 
 const weather = require('./modules/weather.js');
 const movie = require('./modules/movies.js');
-
-
 server.use(cors());
+
+
+
 
 
 server.get('/', homeRoute)
